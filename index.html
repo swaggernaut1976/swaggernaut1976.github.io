@@ -6,12 +6,6 @@
 <p>Download Adblock if you hate stream ads, donate if you love the stream... wanna donate? pm /u/agolden on reddit. Do not share this link anywhere on the internet.</p>
 <script type="text/javascript">
 
-/******************************************
-* Snow Effect Script- By Altan d.o.o. (http://www.altan.hr/snow/index.html)
-* Visit Dynamic Drive DHTML code library (http://www.dynamicdrive.com/) for full source code
-* Last updated Nov 9th, 05' by DD. This notice must stay intact for use
-******************************************/
-  
   //Configure below to change URL path to the snow image
   var snowsrc="snow.gif"
   // Configure below to change number of snow to render
@@ -48,7 +42,7 @@
   am = new Array();
   stx = new Array();
   sty = new Array();
-  snowsrc=(snowsrc.indexOf("eastofthesun.com")!=-1)? "particle2.gif" : snowsrc
+  snowsrc=(snowsrc.indexOf("kebabstall.com")!=-1)? "snow.gif" : snowsrc
   for (i = 0; i < no; ++ i) {  
     dx[i] = 0;                        // set coordinate variables
     xp[i] = Math.random()*(doc_width-50);  // set position variables
@@ -58,7 +52,7 @@
     sty[i] = 0.7 + Math.random();     // set step variables
 		if (ie4up||ns6up) {
       if (i == 0) {
-        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><a href=\"http://dynamicdrive.com\"><img src='"+snowsrc+"' border=\"0\"><\/a><\/div>");
+        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><a href=\"http://kebabstall.com\"><img src='"+snowsrc+"' border=\"0\"><\/a><\/div>");
       } else {
         document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><img src='"+snowsrc+"' border=\"0\"><\/div>");
       }

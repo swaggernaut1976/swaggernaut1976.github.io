@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0081)http://castalba.tv/embed.php?cid=25660&amp;wh=960&amp;ht=572&amp;r=kebabstall.com -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>CastAlba.TV Player</title>
+<script async="" src="./CastAlba.TV Player_files/cloudflare.min.js"></script><script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok2v=1613a3a185/"},atok:"795a92131252279dbc7608f9fd4bd493",petok:"2a64e8c4defdabf81988a4f23bcb90f83393f02f-1419291576-1800",zone:"castalba.tv",rocket:"0",apps:{}}];CloudFlare.push({"apps":{"ape":"652708cdfda75b0945030f88c9187210"}});!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok2v=919620257c/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<style>body{margin:0px;padding:0px;}</style>
+<script type="text/javascript" src="./CastAlba.TV Player_files/cufon-yui.js"></script><style type="text/css">@media screen,projection{.cufon-canvas{display:inline;display:inline-block;position:relative;vertical-align:middle;font-size:1px;line-height:1px}.cufon-canvas .cufon-alt{display:none}.cufon-canvas canvas{position:relative}}@media print{.cufon-canvas{padding:0 !important}.cufon-canvas canvas{display:none}.cufon-canvas .cufon-alt{display:inline}}</style>
+<script type="text/javascript" src="./CastAlba.TV Player_files/Tahoma_400-Tahoma_700.font.js"></script>
+<script type="text/javascript">Cufon.replace('h1,h2,h3,h4,h5, h6, .txtcufon');</script>
+<style>.offline h4{font-size:16px;font-weight:normal;color:#bc0505;}</style>
+<script>
+		if (top.location == self.location) {
+			top.location = "http://castalba.tv/channel/25660";
+
+	}
+</script><style type="text/css">.cf-hidden { display: none; } .cf-invisible { visibility: hidden; }</style>
+
+
+
+                        </head><body>setOverlayHTML();
+
+                        cdInterval=null;
+
+                       setTimeout("setFooterHTML_s()",10000);
+                        setTimeout("enableXButton()",15000);
+
+
+                        function enableXButton(){
+
+                            document.getElementById("closexbutton").style.display = 'block';
+
+                        }
+
+                        var player = null;
+
+                        function playerReady(thePlayer) {
+
+                            player = window.document[thePlayer.id];
+
+
+
+                        }
+
+                        cdInterval=null;
+
+                        function setBannerHTML(banner_html)
+
+                        {
+
+                            document.getElementById("banner_container").innerHTML = banner_html;
+
+                        }
+
+                        function removeBannerHTML()
+
+                        {
+
+                            document.getElementById("banner_container").innerHTML = "";
+
+                        }
+
+                        function thisMovie(movieName) {
+
+                            if (navigator.appName.indexOf("Microsoft") != -1) {
+
+                                return window[movieName];
+
+                            } else {
+
+                                return document.getElementById(movieName);
+
+                            }
+
+                        }
+
+
+
+                        function setOverlayHTML()
+
+                        {
+
+                            //removeFooterHTML();
+
+                           // document.getElementById("ad_overlay_content").innerHTML = '&lt;img src="http://i52.tinypic.com/124dbvn.jpg"  alt="" /&gt;';
+
+                            document.getElementById("countdownnum").innerHTML="30";
+
+                            cdInterval=setInterval("countDown()",1000);
+
+                            document.getElementById("ad_overlay").style.display="";
+
+                        }
+
+
+                        function setFooterHTML_s2()
+
+                        {
+
+							document.getElementById("ad_footer_content_s2").style.display="block";
+
+                            //document.getElementById("ad_footer_content_s").innerHTML = '&lt;img src="http://oi42.tinypic.com/5zqfpl.jpg"  alt="" /&gt;';
+
+                            document.getElementById("ad_footer_s").style.display="";
+							
+
+
+                        }
+                       
+
+                        function setFooterHTML_s()
+
+                        {
+
+							document.getElementById("ad_footer_content_s").style.display="block";
+
+                            //document.getElementById("ad_footer_content_s").innerHTML = '&lt;img src="http://oi42.tinypic.com/5zqfpl.jpg"  alt="" /&gt;';
+
+                            document.getElementById("ad_footer_s").style.display="";
+							setTimeout("setFooterHTML_s2()",150000);
+
+                        }
+
+
+
+                        function removeOverlayHTML()
+
+                        {
+
+                            document.getElementById("ad_overlay_content").innerHTML = "";
+
+                            document.getElementById("ad_overlay").style.display="none";
+
+                            cdInterval=0;
+
+                            document.getElementById("countdownnum").innerHTML=0;
+
+                            player.sendEvent("PLAY", true);
+
+                        }
+
+
+
+
+
+                        function removeFooterHTML_s()
+
+                        {
+
+                            document.getElementById("ad_footer_content_s").innerHTML = "";
+
+                            document.getElementById("ad_footer_s").style.display="none";
+
+                        }
+
+
+
+                        function countDown()
+
+                        {
+
+                            currentCD=parseInt(document.getElementById("countdownnum").innerHTML);
+
+                            if (currentCD==1)
+
+                                removeOverlayHTML();
+
+                            else
+
+                                document.getElementById("countdownnum").innerHTML=(currentCD-1);
+
+                        }
+
+
+
+                   
+
+
+
+                    
+
+<iframe frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="1" height="1" src="about:blank"></iframe>
+
+</body></html>

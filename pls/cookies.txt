@@ -1,6 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-.castalba.tv	TRUE	/	FALSE	1999999999	__cfduid	dd1840f0f34d3c6868073c218ce08ab091419290480
-.cloudflare.com	TRUE	/	FALSE	1999999999	__cfduid	dd7d8a55e349effb9e15f171b71d9749e1419290481
-castalba.tv	TRUE	/	FALSE	1999999999	PHPSESSID	7u5nft2av6jjd6frj2fm6vc5p3
-

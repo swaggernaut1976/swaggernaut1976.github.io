@@ -1,1 +1,0 @@
-document.write('<ifr'+'ame src="http://castalba.tv/embed.php?cid='+id+'&wh='+ew+'&ht='+eh+'&r='+document.domain+'" width="'+ ew+'" height="'+ eh+'" id="m6131383132303030373234" scrolling=no frameborder="0" scrolling="no" allowtransparency="true"></ifr'+'ame>');

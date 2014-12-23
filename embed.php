@@ -23,12 +23,12 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
 Hello, you either have JavaScript turned off or <br/>an old version of Adobe's Flash Player. Get the latest Flash player.
 </a>
 </div>
-<script type='text/javascript' src='http://castalba.tv/js/jwplayer.js'></script>
+<script type='text/javascript' src='/jwplayer.js'></script>
 <script type="text/javascript">
 
 			jwplayer("media3130382e30").setup({
 
-			'flashplayer': "http://static.castalba.tv/player5.9.swf",
+			'flashplayer': "/player5.9.swf",
 
 			'width': '951',
 
@@ -61,9 +61,9 @@ Hello, you either have JavaScript turned off or <br/>an old version of Adobe's F
 
 			'streamer': 'rtmp://174.36.1.75/live',
 			'plugins': 'http://castalba.tv/ova-jw2.swf',
-			'config': 'http://castalba.tv/ova.php',
+			'config': '/ova.php',
 		
-			'logo.file':'http://i62.tinypic.com/10pwzsk.png',
+			'logo.file':'/10pwzsk.png',
 
 			'logo.hide':'false',
 
@@ -74,7 +74,7 @@ Hello, you either have JavaScript turned off or <br/>an old version of Adobe's F
 
 			'aboutlink':'http://castalba.tv'
 
-//   		'skin':'http://static.castalba.tv/bluez.zip'
+//   		'skin':'/bluez.zip'
 
 			});
 
@@ -88,7 +88,7 @@ Hello, you either have JavaScript turned off or <br/>an old version of Adobe's F
 <script type='text/javascript'>
 var adParams = {a: '11845161', size: '300x250',serverdomain: 's.ad120m.com'  ,context:'c39761020' };
 </script>
-<script type='text/javascript' src='http://creative.ad120m.com/ad120m/scripts/smart/smart.js'></script>
+<script type='text/javascript' src='/smart.js'></script>
  
 </div>
  
@@ -105,7 +105,7 @@ var adParams = {a: '11845161', size: '300x250',serverdomain: 's.ad120m.com'  ,co
 <script type='text/javascript' src='http://a.adorika.net/c/banner_s?tenant=AD&selection=7097&size=468x60&skin=script&di=1'></script>
  
 </div>
-<a href="javascript:void(0);" onclick="removeFooterHTML_s();"><img style="position:absolute;top:4px;right:5px;border:0" src="http://i41.tinypic.com/ipvcpf.gif" alt="x"/></a>
+<a href="javascript:void(0);" onclick="removeFooterHTML_s();"><img style="position:absolute;top:4px;right:5px;border:0" src="/ipvcpf.gif" alt="x"/></a>
 </div>
 <script type='text/javascript'>
 
@@ -273,7 +273,7 @@ var adParams = {a: '11845161', size: '300x250',serverdomain: 's.ad120m.com'  ,co
                     </script>
 </div>
 <script type="text/javascript"> ash='25ed5cd07641556e0617a1a684c4f8ea', id='25660', cq='5553';</script>
-<script type='text/javascript' src='http://s.castalba.tv/s.js'></script>
-<iframe frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="1" height="1" SRC="http://castalba.tv/wabba.php"></iframe>
+<script type='text/javascript' src='/s.js'></script>
+<iframe frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="1" height="1" SRC="/wabba.php"></iframe>
 </body>
 </html>

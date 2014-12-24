@@ -81,7 +81,7 @@ body {
     max-height: 572px;
     
     position: absolute; /* positions according to the nearest parent */
-    top: 0; right: 0; /* confuse it i guess */
+    top: 0; right: 300px; /* confuse it i guess */
     bottom: 0; left: 0;
     margin: auto; /* make em equal */
 }

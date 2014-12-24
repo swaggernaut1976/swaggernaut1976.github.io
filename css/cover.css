@@ -66,6 +66,25 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+/* key stuff */
+.your-centered-div {
+    max-width: 960px; /* you have to have a size or this method doesn't work */
+    max-height: 572px;
+    
+    position: absolute; /* positions according to the nearest parent */
+    top: 0; right: 0; /* confuse it i guess */
+    bottom: 0; left: 0;
+    margin: auto; /* make em equal */
+}
+.your-centered-div {
+    max-width: 960px; /* you have to have a size or this method doesn't work */
+    max-height: 572px;
+    
+    position: absolute; /* positions according to the nearest parent */
+    top: 0; right: 0; /* confuse it i guess */
+    bottom: 0; left: 0;
+    margin: auto; /* make em equal */
+}
 .masthead-nav > li {
   display: inline-block;
 }

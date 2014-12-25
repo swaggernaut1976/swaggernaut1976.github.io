@@ -1,3 +1,14 @@
+video#bgvid {
+position: fixed; right: 0; bottom: 0;
+min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;
+background: url(hip2clip.jpg) no-repeat;
+background-size: cover;
+}
+@media screen and (max-device-width: 800px) {
+html { background: url(polina.jpg) #000 no-repeat center center fixed; }
+#bgvid { display: none; }
+}
 #titles {
     overflow: hidden;
     background-color: #000;

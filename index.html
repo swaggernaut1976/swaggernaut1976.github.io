@@ -80,6 +80,27 @@ function changesize(size) {
 	document.getElementById('sbox').style.height = document.getElementById('watchit').height + "px";
 	document.getElementById("vidlink").outerHTML = "<a id=vidlink onClick=javascript:changesize(1); return false href=#><b>Default</b></a>";
     }
+	 if (size == 3) {
+        document.getElementById('thebox').width = '848';
+        document.getElementById('thebox').height = '477';
+	 document.getElementById('sbox').style.height = '483px';
+    }
+    if (size == 4) {
+        document.getElementById('thebox').width = '960';
+        document.getElementById('thebox').height = '540';
+	 document.getElementById('sbox').style.height = '546px';
+    }
+    if (size == 5) {
+        var w = window.innerWidth - 340;
+        document.getElementById('thebox').width = w;
+        document.getElementById('thebox').height = (w / 1.778).toFixed();
+	 document.getElementById('sbox').style.height = document.getElementById('thebox').height + "px";
+    }
+    if (size == 6) {
+        document.getElementById('thebox').width = '1024';
+        document.getElementById('thebox').height = '576';
+	 document.getElementById('sbox').style.height = '584px';
+    }
 }
 
 </script>
@@ -141,7 +162,6 @@ function hidechat() {
         }
     }
 }
-
 
 </script>
  
@@ -221,7 +241,7 @@ if ( window.addEventListener ) {
 <p></p>
 
 <font size="1">
-Change Size: <a id="vidlink" onclick="javascript:changesize(2);" return="" false="" href="#">Fit with chat</a> &nbsp; <a href="#" onclick="shite(); return false">Pop Out</a>&nbsp;||&nbsp;<a href="#" id="chatlink2" onclick="hidechat(); return false">Hide Chat</a> &nbsp; <a href="chat.html" onclick="chatPopout(); return false">Pop Out</a> &nbsp; <a href="html5.html" id="chatlink" target="chatit" onclick="changeLink()">HTML5 Chat</a> 
+Change Size: <a onclick="javascript:changesize(3); return false" href="#">Small</a><a id="vidlink" onclick="javascript:changesize(2);" return="" false="" href="#">Fit with chat</a> &nbsp; <a href="#" onclick="shite(); return false">Pop Out</a>&nbsp;||&nbsp;<a href="#" id="chatlink2" onclick="hidechat(); return false">Hide Chat</a> &nbsp; <a href="chat.html" onclick="chatPopout(); return false">Pop Out</a> &nbsp; <a href="html5.html" id="chatlink" target="chatit" onclick="changeLink()">HTML5 Chat</a> 
  &nbsp; &nbsp; | &nbsp; &nbsp; 
 <a href="/two">AltStream</a> &nbsp; <a href="/backup">Backup</a>
 </font>

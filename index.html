@@ -71,14 +71,12 @@ function changesize(size) {
         document.getElementById('watchit').width = '960';
         document.getElementById('watchit').height = '540';
 	document.getElementById('sbox').style.height = '540px';
-	document.getElementById("vidlink").outerHTML = "<a id=vidlink onClick=javascript:changesize(2); return false href=#>Fit with chat</a>";
     }
     if (size == 2) {
         var w = window.innerWidth - 400;
         document.getElementById('watchit').width = w;
         document.getElementById('watchit').height = (w / 1.778).toFixed();
 	document.getElementById('sbox').style.height = document.getElementById('watchit').height + "px";
-	document.getElementById("vidlink").outerHTML = "<a id=vidlink onClick=javascript:changesize(1); return false href=#><b>Default</b></a>";
     }
 	 if (size == 3) {
         document.getElementById('watchit').width = '848';
@@ -92,9 +90,9 @@ function changesize(size) {
     }
     if (size == 5) {
         var w = window.innerWidth - 340;
-        document.getElementById('thebox').width = w;
-        document.getElementById('thebox').height = (w / 1.778).toFixed();
-	 document.getElementById('sbox').style.height = document.getElementById('thebox').height + "px";
+        document.getElementById('watchit').width = w;
+        document.getElementById('watchit').height = (w / 1.778).toFixed();
+	 document.getElementById('sbox').style.height = document.getElementById('watchit').height + "px";
     }
     if (size == 6) {
         document.getElementById('thebox').width = '1024';
@@ -241,7 +239,7 @@ if ( window.addEventListener ) {
 <p></p>
 
 <font size="1">
-Change Size: <a onclick="javascript:changesize(3); return false" href="#">Small</a> - <a id="vidlink" onclick="javascript:changesize(2);" return="" false="" href="#">Fit with chat</a> - <a href="#" onclick="shite(); return false">Pop Out</a>&nbsp;||&nbsp;<a href="#" id="chatlink2" onclick="hidechat(); return false">Hide Chat</a> - <a href="chat.html" onclick="chatPopout(); return false">Pop Out</a> - <a href="html5.html" id="chatlink" target="chatit" onclick="changeLink()">HTML5 Chat</a> 
+Change Size: <a onclick="javascript:changesize(3); return false" href="#">Small</a> - <a id="vidlink" onclick="javascript:changesize(5);" return="" false="" href="#">Fit with chat</a> - <a href="#" onclick="shite(); return false">Pop Out</a>&nbsp;||&nbsp;<a href="#" id="chatlink2" onclick="hidechat(); return false">Hide Chat</a> - <a href="chat.html" onclick="chatPopout(); return false">Pop Out</a> - <a href="html5.html" id="chatlink" target="chatit" onclick="changeLink()">HTML5 Chat</a> 
  &nbsp; &nbsp; | &nbsp; &nbsp; 
 <a href="/two">AltStream</a> &nbsp; <a href="/backup">Backup</a>
 </font>

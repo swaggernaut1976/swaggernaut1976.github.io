@@ -88,28 +88,28 @@ var manToggle = false;
 var togOff = false;
 
 function chatPopout() {
-if (document.getElementById("chatlink").innerHTML.indexOf("HTML5") > -1) {
- window.chatDuck = window.open("flash.html","ChatD","resizable=yes,toolbar=no,scrollbars=no,menubar=no,status=no,directories=no,width=500,height=600");
-} else {
+if (document.getElementById("chatlink").innerHTML.indexOf("FLASH") > -1) {
  window.chatDuck = window.open("html5.html","ChatD","resizable=yes,toolbar=no,scrollbars=no,menubar=no,status=no,directories=no,width=500,height=600");
+} else {
+ window.chatDuck = window.open("flash.html","ChatD","resizable=yes,toolbar=no,scrollbars=no,menubar=no,status=no,directories=no,width=500,height=600");
 }
 }
 function shite() {
-	window.poppedDuck = window.open("stream.html","BoxD","resizable=yes,toolbar=no,scrollbars=no,menubar=no,status=no,directories=no,width=854,height=480");
+	window.poppedDuck = 'window.open("/elitehax","BoxM","resizable=yes,toolbar=no,scrollbars=no,menubar=no,status=no,directories=no,width=960,height=540");
 }
 
 function changeLink(){
-     if (document.getElementById("chatlink").innerHTML.indexOf("HTML5") > -1) {
+     if (document.getElementById("chatlink").innerHTML.indexOf("FLASH") > -1) {
          setTimeout(function() {
              var link = document.getElementById("chatlink");
-             link.setAttribute('href', "flash.html");
-             document.getElementById("chatlink").innerHTML = "<b>Flash Chat</b>";
+             link.setAttribute('href', "html5.html");
+             document.getElementById("chatlink").innerHTML = "<b>HTML5 Chat</b>";
          }, 100);
      } else {
          setTimeout(function() {
              var link = document.getElementById("chatlink");
-             link.setAttribute('href', "html5.html");
-             document.getElementById("chatlink").innerHTML = "HTML5 Chat";
+             link.setAttribute('href', "flash.html");
+             document.getElementById("chatlink").innerHTML = "Flash Chat";
          }, 100);
      }
 }
@@ -188,7 +188,7 @@ if ( window.addEventListener ) {
 <p></p>
 
 <font size="1">
-<a href="#" id="chatlink2" onclick="hidechat(); return false">Hide Chat</a> &nbsp; <a href="html5.html" id="chatlink" target="chatit" onclick="changeLink()">HTML5 Chat</a> &nbsp; <a href="chat.html" onclick="chatPopout(); return false">Pop Out</a> &nbsp; &nbsp;| &nbsp; &nbsp; Video: &nbsp; 
+<a href="#" id="chatlink2" onclick="hidechat(); return false">Hide Chat</a> &nbsp; <a href="flash.html" id="chatlink" target="chatit" onclick="changeLink()">Flash Chat</a> &nbsp; <a href="chat.html" onclick="chatPopout(); return false">Pop Out</a> &nbsp; &nbsp;| &nbsp; &nbsp; Video: &nbsp; 
 <a id="vidlink" onclick="javascript:changesize(2);" return="" false="" href="#">Fit with chat</a> &nbsp; <a href="#" onclick="shite(); return false">Pop Out</a> &nbsp; &nbsp; | &nbsp; &nbsp; 
 </font>
 <p></p>
@@ -198,13 +198,9 @@ if ( window.addEventListener ) {
   });
 </script>
 <br><br>
-<p><font size="1"><a href="/elitehax" onClick='window.open("/elitehax","BoxM","resizable=yes,toolbar=no,scrollbars=no,menubar=no,status=no,directories=no,width=960,height=540"); return false'>pop-out stream</font></a></p>
 <div>
 <font size="1">streams compiled from various sites, we only link/embed them and do not host them.<br><a href="/dmca">dmca/abuse info</a></font>
 </div>
-<p>
-<div>
-<font size="1"><br><a href="/hof">OGs</a></font></p>
 </body>
 </center>
 </html>

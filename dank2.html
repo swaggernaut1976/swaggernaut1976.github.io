@@ -17,6 +17,137 @@
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <meta name="msapplication-TileColor" content="#2b5797">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<style type="text/css">
+a{
+color:#F5AF1B
+}
+
+div.hr { 
+width: 100%; 
+height: 2px; 
+border: 0; 
+background-color: red; 
+margin-top: 5px; 
+} 
+
+ul.rules {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+      -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+}
+
+/* Font for text within tooltips */
+.bottomtips {
+font-family: "Tahoma"
+}
+
+#text {margin:50px auto; width:500px}
+.hotspot {color:#900; padding-bottom:1px; border-bottom:1px dotted #900; cursor:pointer}
+
+#tt {position:absolute; display:block; background:url(images/tt_left.gif) top left no-repeat}
+#tttop {display:block; height:5px; margin-left:5px; background:url(images/tt_top.gif) top right no-repeat; overflow:hidden}
+#ttcont {display:block; padding:2px 12px 3px 7px; margin-left:5px; background:#666; color:#FFF}
+#ttbot {display:block; height:5px; margin-left:5px; background:url(images/tt_bottom.gif) top right no-repeat; overflow:hidden}
+
+</style>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script><style type="text/css"></style>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript">
+
+
+function changesize(size) {
+    if (size == 1) {
+        document.getElementById('watchit').width = '960';
+        document.getElementById('watchit').height = '540';
+	document.getElementById('sbox').style.height = '540px';
+	document.getElementById("vidlink").outerHTML = "<a id=vidlink onClick=javascript:changesize(2); return false href=#>Fit with chat</a>";
+    }
+    if (size == 2) {
+        var w = window.innerWidth - 400;
+        document.getElementById('watchit').width = w;
+        document.getElementById('watchit').height = (w / 1.778).toFixed();
+	document.getElementById('sbox').style.height = document.getElementById('watchit').height + "px";
+	document.getElementById("vidlink").outerHTML = "<a id=vidlink onClick=javascript:changesize(1); return false href=#><b>Default</b></a>";
+    }
+}
+
+</script>
+<style>
+.ui-resizable-helper { border: 1px dotted gray; }
+
+</style>
+<script type="text/javascript">
+$(function() {
+$( ".resizable" ).resizable({
+animate: true, animateEasing: 'swing', animateDuration: 500
+});
+});
+
+var forceOff = false;
+var manToggle = false;
+var togOff = false;
+
+function chatPopout() {
+if (document.getElementById("chatlink").innerHTML.indexOf("HTML5") > -1) {
+ window.chatDuck = window.open("flash.html","ChatD","resizable=yes,toolbar=no,scrollbars=no,menubar=no,status=no,directories=no,width=500,height=600");
+} else {
+ window.chatDuck = window.open("html5.html","ChatD","resizable=yes,toolbar=no,scrollbars=no,menubar=no,status=no,directories=no,width=500,height=600");
+}
+}
+function shite() {
+	window.poppedDuck = window.open("stream.html","BoxD","resizable=yes,toolbar=no,scrollbars=no,menubar=no,status=no,directories=no,width=854,height=480");
+}
+
+function changeLink(){
+     if (document.getElementById("chatlink").innerHTML.indexOf("HTML5") > -1) {
+         setTimeout(function() {
+             var link = document.getElementById("chatlink");
+             link.setAttribute('href', "flash.html");
+             document.getElementById("chatlink").innerHTML = "<b>Flash Chat</b>";
+         }, 100);
+     } else {
+         setTimeout(function() {
+             var link = document.getElementById("chatlink");
+             link.setAttribute('href', "html5.html");
+             document.getElementById("chatlink").innerHTML = "HTML5 Chat";
+         }, 100);
+     }
+}
+
+function hidechat() {
+    if (document.getElementById("sbox").style.display == 'inline-block') {
+        window.manToggle = true;
+        document.getElementById("sbox").style.display = "none"
+        document.getElementById("chatlink2").innerHTML = "<b>Show Chat</b>"
+    } else {
+        if (forceOff != 1) {
+            window.manToggle = false;
+            document.getElementById("sbox").style.display = "inline-block"
+            document.getElementById("chatlink2").innerHTML = "Hide Chat"
+        } else {
+            alert("Chat has been forcibly disabled.")
+        }
+    }
+}
+
+
+</script>
+ 
+<style type="text/css">
+#text {margin:50px auto; width:500px}
+.hotspot {color:#900; padding-bottom:1px; border-bottom:1px dotted #900; cursor:pointer}
+
+#tt {position:absolute; display:block; background:url(images/tt_left.gif) top left no-repeat}
+#tttop {display:block; height:5px; margin-left:5px; background:url(images/tt_top.gif) top right no-repeat; overflow:hidden}
+#ttcont {display:block; padding:2px 12px 3px 7px; margin-left:5px; background:#666; color:#FFF}
+#ttbot {display:block; height:5px; margin-left:5px; background:url(images/tt_bottom.gif) top right no-repeat; overflow:hidden}
+
+
+</style>
 <script type="text/javascript">
 if ( window.addEventListener ) {  
   var state = 0, konami = [38,38,40,40,37,39,37,39,66,65];  
@@ -54,8 +185,24 @@ if ( window.addEventListener ) {
 </h1>
 <center>
 <p>[[<a href="/">MainStream</a> | <a href="/two">AltStream</a>]]</p>
-<iframe width="960" height="540" scrolling="no" src="/elitehax" frameborder="0" allowfullscreen></iframe>
-<script id="cid0020000080214178279" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 300px;height: 540px;">{"handle":"kebabstall","arch":"js","styles":{"a":"c5eff7","c":"000000","d":"000000","f":0,"i":0,"k":"c5eff7","l":"c5eff7","m":"c5eff7","q":"c5eff7","t":0,"ab":false,"surl":0}}</script>
+<iframe id="watchit" name="watchit" src="elitehax.html" height="540" width="960" scrolling="no" style="border-color:#F5AF1B;border-width:2px;border-style:solid;margin:12px;position:relative;top:30px;"></iframe>
+<span id="sbox" style="position: relative; top: 20px; display: inline-block; width: 300px; height: 540px;" class="resizable ui-resizable">
+<iframe id="chatit" name="chatit" scrolling="no" frameborder="0" src="flash.html" height="100%" style="width: 100%;"></iframe><div class="ui-resizable-handle ui-resizable-e" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000;"></div></span>
+<br><br><br>
+<p style="color:#F5AF1B"></p>
+
+<font size="+1" color="#F5AF1B">
+<a href="#" id="chatlink2" onclick="hidechat(); return false">Hide Chat</a> &nbsp; <a href="html5.html" id="chatlink" target="chatit" onclick="changeLink()">HTML5 Chat</a> &nbsp; <a href="chat.html" onclick="chatPopout(); return false">Pop Out</a> &nbsp; &nbsp;| &nbsp; &nbsp; Video: &nbsp; 
+<a id="vidlink" onclick="javascript:changesize(2);" return="" false="" href="#">Fit with chat</a> &nbsp; <a href="#" onclick="shite(); return false">Pop Out</a> &nbsp; &nbsp; | &nbsp; &nbsp; 
+<a href="/two">AltStream</a> &nbsp; <a href="/backup">Backup</a>
+</font>
+<p></p>
+<script type="text/javascript">
+  $(document).ready(function() {
+    Tipped.create('.inline');
+  });
+</script>
+<br><br>
 <p><font size="1"><a href="/elitehax" onClick='window.open("/elitehax","BoxM","resizable=yes,toolbar=no,scrollbars=no,menubar=no,status=no,directories=no,width=960,height=540"); return false'>pop-out stream</font></a></p>
 <div>
 <font size="1">streams compiled from various sites, we only link/embed them and do not host them.<br><a href="/dmca">dmca/abuse info</a></font>

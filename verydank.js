@@ -24,7 +24,7 @@ function changeLink(){
          setTimeout(function() {
              var link = document.getElementById("chatlink");
              link.setAttribute('href', "flash.html");
-             document.getElementById("chatlink").innerHTML = "<b>Flash Chat</b>";
+             document.getElementById("chatlink").innerHTML = "Flash Chat";
          }, 100);
      } else {
          setTimeout(function() {

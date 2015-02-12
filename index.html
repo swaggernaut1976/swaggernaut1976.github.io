@@ -69,7 +69,7 @@ function changesize(size) {
     if (size == 1) {
         document.getElementById('watchit').width = '960';
         document.getElementById('watchit').height = '540';
-	document.getElementById('sbox').style.height = '540px';
+	document.getElementById('sbox').style.height = '546px';
     }
     if (size == 2) {
         var w = window.innerWidth - 400;
@@ -78,9 +78,9 @@ function changesize(size) {
 	document.getElementById('sbox').style.height = document.getElementById('watchit').height + "px";
     }
 	 if (size == 3) {
-        document.getElementById('watchit').width = '848';
-        document.getElementById('watchit').height = '477';
-	 document.getElementById('sbox').style.height = '483px';
+        document.getElementById('watchit').width = '854';
+        document.getElementById('watchit').height = '480';
+	 document.getElementById('sbox').style.height = '486px';
     }
     if (size == 4) {
         document.getElementById('watchit').width = '1024';
@@ -154,8 +154,6 @@ if ( window.addEventListener ) {
 
 <body bgcolor="#5AA17B" onLoad="update(); setInterval('update()', 30000)">
 <center>
-<!-- just putting this here for now to make sure it works -->
-<span id="dat"></span>
 <h1 align="center">
 <a href="/donate"><img src="donate2.png" width="127" height="122" alt="donate" title="spare me a shekel"/></a><a href="/"><img src="logo.png" alt="kebabstall" title="pretty gay site amirite"/></a><a href="/donate"><img src="donate1.png" width="127" height="122" alt="donate" title="shekels this way"/>
 </a>
@@ -174,7 +172,7 @@ if ( window.addEventListener ) {
 <font size="1">
 Change Size: <a onclick="javascript:changesize(3); return false" href="#">Small</a> - <a onclick="javascript:changesize(1); return false" href="#">Normal</a> - <a onclick="javascript:changesize(4); return false" href="#">Large</a> - <a id="vidlink" onclick="javascript:changesize(2);" return="" false="" href="#">Fit with chat</a> - <a href="#" onclick="shite(); return false">Pop Out</a>&nbsp;||&nbsp;<a href="#" id="chatlink2" onclick="hidechat(); return false">Hide Chat</a> - <a href="chat.html" onclick="chatPopout(); return false">Pop Out</a> - <a href="html5.html" id="chatlink" target="chatit" onclick="changeLink()">HTML5 Chat</a> 
 &nbsp; | &nbsp; 
-<a href="/two">AltStream</a> &nbsp; <a href="/backup">Backup</a>
+<a href="/two">AltStream</a>
 </font>
 <p></p>
 <script type="text/javascript">
@@ -187,6 +185,7 @@ Change Size: <a onclick="javascript:changesize(3); return false" href="#">Small<
 <div>
 <font size="1">streams compiled from various sites, we only link/embed them and do not host them.<br><a href="/dmca">dmca/abuse info</a></font>
 </div>
+<span id="dat"></span>
 <br><br>
 
 

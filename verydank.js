@@ -50,3 +50,36 @@ function hidechat() {
         }
     }
 }
+
+// le ajax xD
+function getXmlObject() {
+    if (window.XMLHttpRequest) {
+        return new XMLHttpRequest()
+    } else if (window.ActiveXObject) {
+        return new ActiveXObject("Microsoft.XMLHTTP")
+    } else {}
+}
+
+function update() {
+    var r = getXmlObject();
+    var url = "header.html?" + Math.random();
+    var active = '0';
+    if (r.readyState == 4 || r.readyState == 0) {
+
+        r.open("GET", url, true);
+
+        r.onreadystatechange = function () {
+            if (r.readyState == 4) {
+                if (r.responseText && r.status == 200) {
+                    if (r.responseText != window.lastPitch && r.responseText != 'no') {
+                        document.getElementById("dat").innerHTML = r.responseText;
+                        window.lastPitch = r.responseText;
+                    }
+                }
+            }
+        };
+
+        r.send(null);
+
+    }
+}

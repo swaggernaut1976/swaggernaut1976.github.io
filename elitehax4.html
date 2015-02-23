@@ -16,7 +16,10 @@ jwplayer("player1").setup({
     primary: "hls",
     autostart:true,
 		skin: "glow",
-    file: "http://stream.ssh101.com/hls/kebabstall.m3u8"
+    sources: [{
+	file: "http://stream.ssh101.com/hls/kebabstall.m3u8",
+	label: "480p SD"
+	]}
 });
 </script>
 </body>

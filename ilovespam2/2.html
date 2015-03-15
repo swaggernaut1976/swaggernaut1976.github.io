@@ -64,30 +64,6 @@ font-family: "Open Sans"
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 <script src="2.js"></script>
 <script src="/detect.js"></script>
-<SCRIPT>
-function passWord() {
-var testV = 1;
-var pass1 = prompt('Please Enter Your Password',' ');
-while (testV < 3) {
-if (!pass1)
-history.go(-1);
-if (pass1.toLowerCase() == "blah") {
-alert('You Got it Right!');
-window.open('target.html');
-break;
-}
-testV+=1;
-var pass1 =
-prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-}
-if (pass1.toLowerCase()!="password" & testV ==3)
-history.go(-1);
-return " ";
-}
-</SCRIPT>
-<FORM>
-<input type="button" value="Enter Protected Area" onClick="passWord()">
-</FORM>
 <script type="text/javascript">
 
 function changesize(size) {
@@ -139,7 +115,7 @@ function changesize(size) {
 <div>
 I'm Golden's Bitch!!.. Bitcoin: 1QAksLuUL39TMSAhwS7XJ2gVrfkpuAthUL
 </div>
-<p> Streams: <a href="/index">1</a> | <a href="/2">2</a> | <a href="/3">3</a> | <a href="/4">4</a> | <a href="/m">Mobile</a>
+<p> Streams: <a href="/index">1</a> | <a href="/pw2">2 (PW Needed)</a> | <a href="/3">3</a> | <a href="/4">4</a> | <a href="/m">Mobile</a>
 </h1>
 
 

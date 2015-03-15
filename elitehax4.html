@@ -11,14 +11,14 @@ jwplayer.key="6RfMdMqZkkH88h026pcTaaEtxNCWrhiF6ACoxKXjjiI=";
  <div id="player1"></div>
 <script type="text/javascript">
 jwplayer("player1").setup({
- file: 'rtmp://66.55.92.79/c3b0a7a8-c822-4d5b-94e4-575fd8329d7e/k4yYuj5SwyskyBUzegsT',
- provider: "https://streamup.com/assets/StreamupVideoChat.swf",
- type:'rtmp'
+ playlist: [{
+ file: 'http://live.streamup.com:1935/app/kebabstall/playlist.m3u8',
+ type:'hls'
+ }],
  width:'100%',
  height:'100%',
- autostart: true,
+ primary: 'hls',
  skin: "roundster",
- primary: 'flash',
  analytics: {
  enabled: false,
  cookies: false
@@ -27,3 +27,4 @@ jwplayer("player1").setup({
 </script>
 </body>
 </html>
+

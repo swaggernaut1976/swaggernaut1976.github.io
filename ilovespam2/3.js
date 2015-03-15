@@ -16,7 +16,7 @@ if (document.getElementById("chatlink").innerHTML.indexOf("HTML5") > -1) {
 }
 }
 function shite() {
-	window.poppedDuck = window.open("stream1.html","BoxD","resizable=yes,toolbar=no,scrollbars=no,menubar=no,status=no,directories=no,width=960,height=540");
+	window.poppedDuck = window.open("stream3.html","BoxD","resizable=yes,toolbar=no,scrollbars=no,menubar=no,status=no,directories=no,width=960,height=540");
 }
 
 function changeLink(){

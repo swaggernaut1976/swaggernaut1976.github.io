@@ -1,0 +1,31 @@
+<html>
+<head>
+ <title>kebab</title>
+ <style type="text/css">body { border-width: 0px; margin: 0px; padding: 0px; overflow: hidden; }</style>
+ <script src="http://p.jwpcdn.com/6/11/jwplayer.js" type="text/javascript"></script>
+<script type="text/javascript">
+jwplayer.key="6RfMdMqZkkH88h026pcTaaEtxNCWrhiF6ACoxKXjjiI=";
+</script>
+</head>
+<body>
+ <div id="player1"></div>
+<script type="text/javascript">
+jwplayer("player1").setup({
+ playlist: [{
+ file: 'http://cctv2-lh.akamaihd.net/z/poshmcgosh23x67_live@125187/manifest.f4m',
+ provider: "http://players.edgesuite.net/flash/plugins/jw/v3.5/AkamaiAdvancedJWStreamProvider.swf",
+ type:'rtmp'
+ }],
+ width:'100%',
+ height:'100%',
+ autostart: true,
+ skin: "roundster",
+ primary: 'flash',
+ analytics: {
+ enabled: false,
+ cookies: false
+ },
+});
+</script>
+</body>
+</html>

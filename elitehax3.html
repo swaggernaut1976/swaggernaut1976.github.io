@@ -11,20 +11,17 @@ jwplayer.key="6RfMdMqZkkH88h026pcTaaEtxNCWrhiF6ACoxKXjjiI=";
  <div id="player1"></div>
 <script type="text/javascript">
 jwplayer("player1").setup({
- playlist: [{
- file: 'http://cctv2-lh.akamaihd.net/z/poshmcgosh23x67_live@125187/manifest.f4m',
- provider: "http://players.edgesuite.net/flash/plugins/jw/v3.5/AkamaiAdvancedJWStreamProvider.swf",
- type:'rtmp'
- }],
- width:'100%',
- height:'100%',
- autostart: true,
- skin: "roundster",
- primary: 'flash',
- analytics: {
- enabled: false,
- cookies: false
- },
+playlist: [{
+        sources: [{ 
+            file: 'http://cctv2-lh.akamaihd.net/z/poshmcgosh23x67_live@125187/manifest.f4m',
+			provider: "http://players.edgesuite.net/flash/plugins/jw/v3.5/AkamaiAdvancedJWStreamProvider.swf",
+			type:'mp4'
+        },{
+            file: 'http://208.75.225.26/hls/kebabstall.m3u8',
+			type:'hls'
+        }]
+}],
+    primary: "flash"
 });
 </script>
 </body>

@@ -16,7 +16,7 @@ if (document.getElementById("chatlink").innerHTML.indexOf("HTML5") > -1) {
 }
 }
 function shite() {
-	window.poppedDuck = window.open("elitehax.html","BoxD","resizable=yes,toolbar=no,scrollbars=no,menubar=no,status=no,directories=no,width=960,height=540");
+	window.poppedDuck = window.open("stream1.html","BoxD","resizable=yes,toolbar=no,scrollbars=no,menubar=no,status=no,directories=no,width=960,height=540");
 }
 
 function changeLink(){
@@ -48,38 +48,5 @@ function hidechat() {
         } else {
             alert("Chat has been forcibly disabled.")
         }
-    }
-}
-
-// le ajax xD
-function getXmlObject() {
-    if (window.XMLHttpRequest) {
-        return new XMLHttpRequest()
-    } else if (window.ActiveXObject) {
-        return new ActiveXObject("Microsoft.XMLHTTP")
-    } else {}
-}
-
-function update() {
-    var r = getXmlObject();
-    var url = "header.html?" + Math.random();
-    var active = '0';
-    if (r.readyState == 4 || r.readyState == 0) {
-
-        r.open("GET", url, true);
-
-        r.onreadystatechange = function () {
-            if (r.readyState == 4) {
-                if (r.responseText && r.status == 200) {
-                    if (r.responseText != window.lastPitch && r.responseText != 'no') {
-                        document.getElementById("dat").innerHTML = r.responseText;
-                        window.lastPitch = r.responseText;
-                    }
-                }
-            }
-        };
-
-        r.send(null);
-
     }
 }

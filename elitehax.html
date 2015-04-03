@@ -9,20 +9,30 @@
  <div id="player1"></div>
 <script type="text/javascript">
 jwplayer("player1").setup({
- playlist: [{
- file: 'rtmp://broadcast.castamp.com/live/kebabman_apvoi6',
- type:'rtmp'
- }],
- width:'100%',
- height:'100%',
- autostart: true,
- skin: "roundster",
- primary: "flash",
- analytics: {
- enabled: false,
- cookies: false
- },
-});
+			'flashplayer': "http://p.castamp.com/cplayer.swf",
+			'width': '600',
+			'height': '360',
+			'backcolor': 'c1ae96',
+			'allowfullscreen':'true',
+			'allowscriptaccess':'always',
+			'wmode':'opaque',
+			'controlbar':'over',
+			'mute':'false',
+			'autostart': 'true',
+			'rtmp.tunneling':'false',
+			'file': 'blank_1428104227_b0de255660787',
+			'streamer': 'rtmp://50.7.28.178/live',
+			'plugins': 'ova-jw.swf',
+			'config': 'http://castamp.com/ova.php',
+			'stretching': 'uniform',
+		    'logo.file':'images/plogo2.png',
+			'logo.hide':'false',
+			'logo.out':'0.6',
+			'logo.position':'top-right',
+			'logo.link':'http://castamp.com/',
+			'abouttext':'CastAMP.com &#45; Free Broadcasting',
+			'aboutlink':'http://castamp.com/'		
+			});
 </script>
 </body>
 </html>

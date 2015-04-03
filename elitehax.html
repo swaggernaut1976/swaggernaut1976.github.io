@@ -1,14 +1,48 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
- <title>kebab</title>
- <style type="text/css">body { border-width: 0px; margin: 0px; padding: 0px; overflow: hidden; }</style>
- <script src="http://p.jwpcdn.com/6/11/jwplayer.js" type="text/javascript"></script>
-<script type="text/javascript">jwplayer.key="6RfMdMqZkkH88h026pcTaaEtxNCWrhiF6ACoxKXjjiI=";</script>
+<title>CastAMP.com Player</title>
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"1a07ef59493b4e8e23a67c955d2c7d92",petok:"71712e6347035a3059198f3b073371adf32fa272-1428104227-1800",zone:"castamp.com",rocket:"0",apps:{}}];CloudFlare.push({"apps":{"ape":"338dbd2b43966376528e43c9c19c8561"}});!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=7e13c32551/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<style>body{margin:0px;padding:0px;}</style>
 </head>
 <body>
- <div id="player1"></div>
+<div style="position:relative">
+<div id="adv_overlay" style="width:600px;height:360px;position:absolute;top:0px;z-index:100;background:url(http://i43.tinypic.com/nlr1fk.png);display:none;">
+<div id="adv_overlay_countdown" style="width:600px;position:absolute;top:5px;text-align:center;color:#fff;font-size:11px">This ad will close in <span id="countdownnum"></span> seconds.</div>
+<div id="closexbutton" style="display:none"><a href="javascript:void(0);" onclick="removeOverlayHTML();"><img style="position:absolute;top:5px;right:200px;border:0;z-index:101" src="http://i46.tinypic.com/2j63j1k.png" alt="x"/></a>
+</div>
+<div id="adv_overlay_content" style="width:300px;height:250px;position:absolute;top:20px;left:0px;background:#fff;">
+<div style="width: 612px;">
+<div style="float:left;" id="adn1">
+ 
+<IFRAME FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=300 HEIGHT=250 SRC="300x250.html?250909329"></IFRAME>
+ 
+ 
+<script type='text/javascript'>
+
+var adParams = {a: '11887123', size: '300x250',serverdomain: 's.ad127m.com'  ,context:'c39951004' };
+
+</script>
+<script type='text/javascript' src='http://creative.ad127m.com/ad127m/scripts/smart/smart.js'></script>
+ 
+</div>
+</div>
+</div>
+</div>
+<div id='mediaspace'>
+<script type="text/javascript" src="js/jwplayer.js"></script>
+<div id="player">
+<h2>Loading Player...</h2>
+</div>
 <script type="text/javascript">
-jwplayer("player1").setup({
+/*
+			jwplayer("player").setup({
 			'flashplayer': "http://p.castamp.com/cplayer.swf",
 			'width': '600',
 			'height': '360',
@@ -33,6 +67,232 @@ jwplayer("player1").setup({
 			'abouttext':'CastAMP.com &#45; Free Broadcasting',
 			'aboutlink':'http://castamp.com/'		
 			});
+*/
+			jwplayer("player").setup({
+			'flashplayer': "http://p.castamp.com/cplayer.swf",
+			'width': '1280',
+			'height': '720',
+			'backcolor': 'c1ae96',
+			'allowfullscreen':'true',
+			'allowscriptaccess':'always',
+			'wmode':'opaque',
+			'controlbar':'over',
+			'mute':'false',
+			'autostart': 'true',
+			'rtmp.tunneling':'false',
+			'file': 'blank_1428104227_b0de255660787eff',
+			'streamer': 'rtmp://50.7.28.178/live',
+			'plugins': 'ova-jw.swf',
+			'config': 'http://castamp.com/ova.php',
+			'stretching': 'uniform',
+		    'logo.file':'images/plogo2.png',
+			'logo.hide':'false',
+			'logo.out':'0.6',
+			'logo.position':'top-right',
+			'logo.link':'http://castamp.com/',
+			'abouttext':'CastAMP.com &#45; Free Broadcasting',
+			'aboutlink':'http://castamp.com/'		
+			});
+		</script>
+</div>
+<div id="ad_footer_s" style="width:468px;height:60px;position:absolute;top:293px;left:66px;background-color:#ffffff;display:none;">
+<div id="ad_footer_content_s" style="display:none;">
+</div>
+<div id="ad_footer_content_s2" style="display:none;">
+</div>
+<a href="javascript:void(0);" onclick="removeFooterHTML_s();"><img style="position:absolute;top:4px;right:5px;border:0" src="images/close.png" alt="x"/></a>
+</div>
+<script type='text/javascript'>
+
+
+						var cdInterval=null;
+                        setOverlayHTML();
+
+                        
+
+                       
+                        setTimeout("enableXButton()",100);
+                        function ShowAgain()
+                        {
+		
+document.getElementById("adv_overlay_content").innerHTML = '<IFRAME FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=300 HEIGHT=250 SRC="300x250-2.html"></IFRAME>';
+document.getElementById("adv_overlay").style.display="block";
+enableXButton();
+                        }	
+
+
+
+                        function enableXButton(){
+
+                            document.getElementById("closexbutton").style.display = 'block';
+
+                        }
+
+                        var player = null;
+
+                        function playerReady(thePlayer) {
+
+                            player = window.document[thePlayer.id];
+
+
+
+                        }
+
+
+                        function setBannerHTML(banner_html)
+
+                        {
+
+                            document.getElementById("banner_container").innerHTML = banner_html;
+
+                        }
+
+                        function removeBannerHTML()
+
+                        {
+
+                            //document.getElementById("banner_container").innerHTML = "";
+
+                        }
+
+                        function thisMovie(movieName) {
+
+                            if (navigator.appName.indexOf("Microsoft") != -1) {
+
+                                return window[movieName];
+
+                            } else {
+
+                                return document.getElementById(movieName);
+
+                            }
+
+                        }
+
+
+
+                        function setOverlayHTML()
+
+                        {
+
+                            //removeFooterHTML();
+
+                           // document.getElementById("adv_overlay_content").innerHTML = '<img src="http://i52.tinypic.com/124dbvn.jpg"  alt="" />';
+
+                            document.getElementById("countdownnum").innerHTML="30";
+
+                            cdInterval=setInterval("countDown()",1000);
+
+                            document.getElementById("adv_overlay").style.display="";
+setFooterHTML_s();
+
+                        }
+
+
+                        function setFooterHTML_s2()
+
+                        {
+						if (document.getElementById("ad_footer_content_s").innerHTML == "") {
+						document.getElementById("ad_footer_content_s2").innerHTML = '<IFRAME FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=468 HEIGHT=60 SRC="468x60.php"></IFRAME>';
+
+							document.getElementById("ad_footer_content_s2").style.display="block";
+							
+                            document.getElementById("ad_footer_s").style.display="";
+						}
+
+                        }
+                       
+
+                        function setFooterHTML_s()
+
+                        {
+						document.getElementById("ad_footer_content_s").innerHTML = '<IFRAME FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=468 HEIGHT=60 SRC="468x60.php"></IFRAME>';
+							document.getElementById("ad_footer_content_s").style.display="block";
+
+
+                            document.getElementById("ad_footer_s").style.display="";
+							setTimeout("setFooterHTML_s2()",150000);
+
+                        }
+
+
+
+                        function removeOverlayHTML()
+
+                        {
+
+                           document.getElementById("adv_overlay_content").style.visibility="hidden";
+					//		document.getElementById("adv_overlay").innerHTML = "";
+                            document.getElementById("adv_overlay").style.visibility="hidden";
+
+                            
+							clearInterval(cdInterval);
+                            //document.getElementById("countdownnum").innerHTML=0;
+						//	setTimeout("setFooterHTML_s()",4000);
+
+                            //player.sendEvent("PLAY");							
+
+                        }
+
+
+
+
+
+                        function removeFooterHTML_s()
+
+                        {
+
+                            //document.getElementById("ad_footer_content_s").innerHTML = "";
+							document.getElementById("ad_footer_content_s2").innerHTML = "";
+						    //document.getElementById("ad_footer_s").innerHTML = "";
+                            document.getElementById("ad_footer_s").style.visibility="hidden";
+
+                        }
+
+
+
+                        function countDown()
+
+                        {
+
+                            currentCD=parseInt(document.getElementById("countdownnum").innerHTML);
+
+                            if (currentCD==1)
+
+                                removeOverlayHTML();
+
+                            else
+
+                                document.getElementById("countdownnum").innerHTML=(currentCD-1);
+
+                        }
+
+
+
+                   
+
+
+
+                    </script>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20316775-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
 </script>
+<script type="text/javascript">
+var adParams = {
+  a: '11887123', size:'800x600', numOfTimes: '99',duration: '1',serverdomain: 's.ad127m.com' ,period: 'hour'  , context:'c11847154' , openNewTab: true
+};
+</script>
+<script type="text/javascript" src="http://creative.ad127m.com/matomy/scripts/popunder/popunder.js"></script>
 </body>
 </html>
